@@ -2,6 +2,7 @@ import React from 'react';
 import Comment from '../Comment/Comment';
 import CommentList from '../CommentList/CommentList';
 import EditMessage from '../Edit/EditMessage';
+import '../Message/Message.css';
 import 'antd/dist/antd.css';
 import {Button} from 'antd';
 
@@ -11,6 +12,7 @@ const message = (props) => {
         allComments = props.allComments.map((comment, index) => {
             return (
                 <CommentList
+                    id={comment.id}
                     input={comment.commentInput}
                     canEdit={comment.canEdit}
                     editCmtInputHandler={props.editCmtInputHandler}
@@ -40,9 +42,9 @@ const message = (props) => {
 
     return (
         <div className="msgComp">
-            <p>#{props.id}: {props.content}</p>
-            <Button type="default" onClick={props.showEdit}>Edit message</Button>
-            <Button type="danger" onClick={props.deleteMsgHandler}>Delete message</Button>
+            <p id="content"><b>Message #{props.id}:</b> {props.content}</p>
+            <Button type="default" onClick={props.showEdit} id="editBtn">Edit</Button>
+            <Button type="danger" onClick={props.deleteMsgHandler} id="deleteBtn">Delete</Button>
             {editingComp}
             {allComments}
             <Comment
@@ -51,7 +53,6 @@ const message = (props) => {
                 cmtObjHandler={props.cmtObjHandler}
                 submitHandler={props.submitHandler}
             ></Comment>
-            <hr></hr>
         </div>
     )
 };

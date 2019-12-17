@@ -1,0 +1,15 @@
+.commentComp{
+    margin-top: 10px;
+    padding: 0px 10px 10px 10px;
+}
+
+#cmtBtn{
+    margin-left: 208px;
+}
+
+#cmtInput{
+    width: 82%;
+    position: static;
+    left: 9%;
+    right: 9%;
+}

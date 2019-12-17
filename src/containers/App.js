@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import Main from '../components/Main/Main';
 import Message from '../components/Message/Message';
-// import Comment from './Comment/Comment';
 
 class App extends Component {
   state = {
+    messages: [],
     newMsg: '',
     editMsg:'',
-    messages: [],
     newComment: '',
     editCmt: ''
   }
