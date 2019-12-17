@@ -1,7 +1,5 @@
 import React from 'react';
 import '../Edit/EditMessage.css';
-import 'antd/dist/antd.css';
-import {Button} from 'antd';
 
 const editMessage = props => {
     return (
@@ -13,18 +11,15 @@ const editMessage = props => {
                     onChange={props.editMsgInputHandler}
                     id="input"
                     rows="2"
-                    cols="48"
                 />
-                <Button 
-                    type="primary" 
+                <button 
                     onClick={props.editMsgHandler} 
-                    className="submitCancelMsgBtn"
-                >Submit</Button>
-                <Button 
-                    type="danger" 
+                    id="submitMsgBtn"
+                >Submit</button>
+                <button 
                     onClick={props.cancelEditMsgHandler} 
-                    className="submitCancelMsgBtn"
-                >Cancel</Button>
+                    id="CancelMsgBtn"
+                >Cancel</button>
             </form>
         </div>
     )

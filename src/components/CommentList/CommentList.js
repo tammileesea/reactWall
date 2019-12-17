@@ -1,8 +1,6 @@
 import React from 'react';
 import EditComment from '../Edit/EditComment';
 import '../CommentList/CommentList.css';
-import 'antd/dist/antd.css';
-import {Button} from 'antd';
 
 const commentList = props => {
     let editingComp = null;
@@ -20,8 +18,8 @@ const commentList = props => {
     return (
         <div className="eachCmt">
             <p id="cmtContent"><b>Comment #{props.id}:</b> {props.input}</p>
-            <Button type="default" onClick={props.showEditCmtHandler} id="editCmtBtn">Edit</Button>
-            <Button type="danger" onClick={props.deleteHandler} id="dltCmtBtn">Delete</Button>
+            <button onClick={props.showEditCmtHandler} id="editCmtBtn">Edit</button>
+            <button onClick={props.deleteHandler} id="dltCmtBtn">Delete</button>
             {editingComp}
         </div>
     )

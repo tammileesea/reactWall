@@ -4,7 +4,12 @@
 }
 
 #cmtBtn{
-    margin-left: 208px;
+    width: 110px;
+    height: 30px;
+    font-size: 14px;
+    background-color: rgb(67, 165, 250);
+    color: white;
+    margin-left: 150px;
 }
 
 #cmtInput{

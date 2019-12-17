@@ -1,7 +1,5 @@
 import React from 'react';
-import '../Main/Main.css'
-import 'antd/dist/antd.css';
-import {Button, Form} from 'antd';
+import '../Main/Main.css';
 
 const main = props => {
     return (
@@ -9,21 +7,20 @@ const main = props => {
             <h1>Welcome to the Wall!</h1>
             <div>
                 <h3>Enter your message here: </h3>
-                <Form onSubmit={props.submitHandler}>
+                <form onSubmit={props.submitHandler}>
                     <textarea
                         type="text"
                         name="inputMsg"
                         value={props.currVal}
                         onChange={props.msgInputHandler}
-                        rows="3"
+                        rows="4"
                         cols="60"
                     /><br/>
-                    <Button
+                    <button
                         id="mainButton"
-                        type="primary" 
                         onClick={props.msgObjHandler}
-                    >Add message</Button>
-                </Form>
+                    >Add message</button>
+                </form>
             </div>
         </div>
     );

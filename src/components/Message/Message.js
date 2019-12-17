@@ -3,8 +3,6 @@ import Comment from '../Comment/Comment';
 import CommentList from '../CommentList/CommentList';
 import EditMessage from '../Edit/EditMessage';
 import '../Message/Message.css';
-import 'antd/dist/antd.css';
-import {Button} from 'antd';
 
 const message = (props) => {
     let allComments = <p>No comments yet</p>;
@@ -43,8 +41,8 @@ const message = (props) => {
     return (
         <div className="msgComp">
             <p id="content"><b>Message #{props.id}:</b> {props.content}</p>
-            <Button type="default" onClick={props.showEdit} id="editBtn">Edit</Button>
-            <Button type="danger" onClick={props.deleteMsgHandler} id="deleteBtn">Delete</Button>
+            <button onClick={props.showEdit} id="editBtn">Edit</button>
+            <button onClick={props.deleteMsgHandler} id="deleteBtn">Delete</button>
             {editingComp}
             {allComments}
             <Comment

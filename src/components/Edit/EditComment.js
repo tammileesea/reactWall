@@ -1,7 +1,5 @@
 import React from 'react';
 import '../Edit/EditComment.css';
-import 'antd/dist/antd.css';
-import {Button} from 'antd';
 
 const editComment = props => {
     return (
@@ -14,16 +12,14 @@ const editComment = props => {
                     rows="2"
                     cols="48"
                 />
-                <Button 
-                    type="primary" 
+                <button 
                     onClick={props.editHandler}
-                    className="submitCancelBtn"
-                >Submit</Button>
-                <Button 
-                    type="danger" 
+                    id="submitCmtBtn"
+                >Submit</button>
+                <button 
                     onClick={props.cancelEditCmtHandler}
-                    className="submitCancelBtn"
-                >Cancel</Button>
+                    id="cancelCmtBtn"
+                >Cancel</button>
             </form>
         </div>
     )

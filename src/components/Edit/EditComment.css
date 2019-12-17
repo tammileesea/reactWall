@@ -3,7 +3,7 @@
     display: block;
 }
 
-.submitCancelBtn{
+#submitCmtBtn{
     width: 48px;
     height: 24px;
     margin: 0px 5px 10px 5px;
@@ -11,4 +11,15 @@
     font-size: 10px;
     text-align: center;
     display: inline-block;
+}
+
+#cancelCmtBtn{
+    width: 48px;
+    height: 24px;
+    margin: 0px 5px 10px 5px;
+    padding: 0px;
+    font-size: 10px;
+    text-align: center;
+    display: inline-block;
+    background-color: rgb(255, 85, 85);
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 import '../Comment/Comment.css';
-import 'antd/dist/antd.css';
-import {Button} from 'antd';
 
 const comment = props => {
     return (
@@ -13,14 +11,13 @@ const comment = props => {
                     id="cmtInput"
                     value={props.cmtVal}
                     onChange={props.cmtInputHandler}
-                    rows="2"
+                    rows="3"
                     cols="48"
                 /><br/>
-                <Button 
-                    type="primary"
+                <button 
                     onClick={props.cmtObjHandler}
                     id="cmtBtn"
-                >Add comment</Button>
+                >Add comment</button>
             </form>
         </div>
     )
